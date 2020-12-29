@@ -52,7 +52,7 @@ export default {
                 },
             }).then(res => res.json())
                 .then(data => {
-                    console.log(data);
+                    // console.log(data);
                     this.records = data;
                     this.isLoading = false;
                 });
