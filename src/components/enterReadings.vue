@@ -38,6 +38,7 @@
                                 </div>
                             </div>
                             <button type="submit" class="btn btn-primary" :disabled="!isValidForm">Submit</button>
+                            <br>
                         </fieldset>
                     </form>
                 </div>
@@ -55,6 +56,25 @@
                     </div>
                 </div>
             </div>
+            <div v-if="!submitted" class="card-columns">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>Flat Num</th>
+                            <th>Raw</th>
+                            <th>Manjeera</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr v-for="(item,index) in submittedReadings" :key="index">
+                            <td>{{item.flatNumber}}</td>
+                            <td>{{item.rawReading}}</td>
+                            <td>{{item.manjeeraReading}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
             <div v-if="!submitted" class="card-columns">
                 <div class="card" v-for="(item,index) in submittedReadings" :key="index">
                     <div class="card-body">
