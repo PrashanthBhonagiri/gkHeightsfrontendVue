@@ -75,7 +75,7 @@
                 </table>
             </div>
 
-            <div v-if="!submitted" class="card-columns">
+            <!-- <div v-if="!submitted" class="card-columns">
                 <div class="card" v-for="(item,index) in submittedReadings" :key="index">
                     <div class="card-body">
                         <div class="card-title">{{item.flatNumber}}</div>
@@ -85,7 +85,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
 
         </div>
     </div>
